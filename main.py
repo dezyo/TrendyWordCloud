@@ -12,9 +12,6 @@ import tweepy
 import threading
 import time
 import sys
-import nltk
-
-nltk.download()
 
 def on_new_client(api, trend):
     try:
