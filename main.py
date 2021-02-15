@@ -30,15 +30,15 @@ def on_new_client(api, trend):
 
 
 #### Para simples busquedas publicas
-TWITTER_APP_KEY="5JAFooQvvUEF7QdXzdbF22Wxo"
+TWITTER_APP_KEY=""
 
-TWITTER_APP_SECRET="eqyl7RaUsyuh1t7S10eZBjNCO9vFS4Zwz52pZJsnnutozn6Q3l"
+TWITTER_APP_SECRET=""
 ####
 
 #### Para cuando tengamos que hacer cosas con nuestro usuario
-TWITTER_KEY="1299023979689246723-rAT7emNEvpwByIHpMFpgcmvQMJg5gx"
+TWITTER_KEY=""
 
-TWITTER_SECRET="YFh5Rg2EyKpVnIQv42TPIpiX7ynWwm93p466y5pRSbXDL"
+TWITTER_SECRET=""
 ####
 
 auth = tweepy.OAuthHandler(TWITTER_APP_KEY, TWITTER_APP_SECRET)
