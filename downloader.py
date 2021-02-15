@@ -14,7 +14,6 @@ from wordcloud import WordCloud
 import time
 import operator
 
-
 class StreamListener(tweepy.StreamListener):
     
     def __init__(self, trend, max_tweets):
