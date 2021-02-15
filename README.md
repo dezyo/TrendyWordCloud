@@ -1,7 +1,7 @@
 # TrendyWordCloud
 Twitter's trending topic Word Clouds
 
-=====
+
 One day project
 ====
 
