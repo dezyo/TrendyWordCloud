@@ -15,7 +15,7 @@ import sys
 
 def on_new_client(api, trend):
     try:
-        max_tweets=10
+        max_tweets=100
         
         estado = download(trend, api, max_tweets)
         if estado == True:
@@ -45,7 +45,7 @@ auth = tweepy.OAuthHandler(TWITTER_APP_KEY, TWITTER_APP_SECRET)
 auth.set_access_token(TWITTER_KEY, TWITTER_SECRET)
 
 api = tweepy.API(auth)
-maxhilos=5
+maxhilos = 5
 hilos = threading.Semaphore(maxhilos)
 usados_csv = "usados.csv"
 
@@ -58,6 +58,9 @@ while True:
         if(elegido != None):
             hilos.acquire()
             threading._start_new_thread(on_new_client,(api, elegido))
+        else:
+            print("Saliendo del servidor, no quedan trends")
+            sys.exit()
             
     except KeyboardInterrupt:
         print("Gracefully shutting down the server!")
