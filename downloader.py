@@ -14,6 +14,7 @@ from wordcloud import WordCloud
 import time
 import operator
 
+
 class StreamListener(tweepy.StreamListener):
     
     def __init__(self, trend, max_tweets):
@@ -35,7 +36,7 @@ class StreamListener(tweepy.StreamListener):
                 
         else:
             print("abriendo trend_{}.csv en on_status".format(self.trend))
-            with open('csv/trend_{}.csv'.format(self.trend), 'a', newline='', encoding='utf-8') as f:
+            with open('csv/trend_{}.csv'.format(self.trend), 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerows(self.list_cleaned)
                 
